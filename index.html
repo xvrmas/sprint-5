@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A joke in a click</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div id="temps"></div>
+        <div id="taca1"></div>
+        <div id="form">
+            <h1>Preparat per riure?</h1>
+            <p id="app"></p>
+            <div id="botons">
+                <button class="btn" id="1" onclick="reportAcudits(id)"><img src="./images/sad.png" width="50rem" alt="sad"></button>
+                <button class="btn" id="2" onclick="reportAcudits(id)"><img src="./images/confused.png" width="50rem" height="auto"
+                        alt="confused"></button>
+                <button class="btn" id="3" onclick="reportAcudits(id)"><img src="./images/smiling.png" width="50rem" height="auto"
+                        alt="smile"></button>
+                <div>
+                    <button class="boto1" onclick="aleatori()">Següent
+                        acudit</button>
+                </div>
+            </div>
+        </div>
+        <div id="taca2"></div>
+    </div>
+</body>
+<script src="./src/main.js"></script>
+
+</html>
