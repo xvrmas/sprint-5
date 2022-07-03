@@ -7,12 +7,13 @@
     display: grid;
     grid-template-columns: 2fr 6fr 2fr;
     grid-template-rows: 12vh 36vh 36vh 12vh;
-    background-repeat: no-repeat;
-    background-image: url(../images/blob-form.svg);
-    background-position: center;
-    background-size: 60%;
+  
 }
-
+#img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
 #temps {
     display: flex;
     grid-column: 1/1;
@@ -26,13 +27,12 @@
     grid-column: 3/3;
     grid-row: 2/2;
     background-repeat: no-repeat;
-    background-image: url(../images/blob-1.svg);
+    background-image: url(../images/blobs/static-1.svg);
 }
 
-#form {
+.form {
     grid-column: 2/3;
     grid-row: 1/5;
-   
     justify-content: center;
     text-align: center;
 }
@@ -90,7 +90,7 @@ p {
 }
 
 .btn:hover {
-    transform: translateY(4px);
+    transform: translateY(5px);
 }
 
 #taca2 {
@@ -98,7 +98,7 @@ p {
     grid-row: 3/5;
     margin-left: 20px;
     background-repeat: no-repeat;
-    background-image: url(../images/blob-2.svg);
+    background-image: url(../images/blobs/static-2.svg );
     background-size: 100%;
 }
 
@@ -106,10 +106,10 @@ p {
     .container {
         display: grid;
         grid-template-columns: 4fr 90fr 4fr;
-        background-image: url(../images/blob-form.svg);
+        background-image: url(../images/blobs/10.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 150%;
+        background-size: 250%;
         justify-content: center;
         text-align: center;
     }
@@ -126,6 +126,7 @@ p {
 
     #temps {
         grid-column: 2/4;
+        grid-row: 1/1;
     }
 
     #form {

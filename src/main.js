@@ -11,14 +11,23 @@ async function weatherForecast() {
 }
 
 function aleatori() {
-    let numero = Math.ceil(Math.random() * 100)
+    let numero = Math.ceil(Math.random() * 10)
     console.log(numero)
-    if (numero % 2 == 0) {
+    return numero
+};
+function fons(numero) {
+    let num = aleatori(numero)
+    document.getElementById(`img`).style.backgroundImage = `url(./images/blobs/${num}.svg)`;
+}
+function joke(numero) {
+    let num = aleatori(numero)
+    if (num % 2 == 0) {
         getJoke();
     } else {
         getJokeNorris();
     }
-};
+    fons()
+}
 async function getJoke() {
     const response = await fetch(` https://icanhazdadjoke.com/`, {
         headers: {
@@ -27,7 +36,7 @@ async function getJoke() {
     });;
     const joke = await response.json();
     console.log(joke.joke)
-    document.getElementById(`app`).innerHTML = `" ${joke.joke} "`;
+    document.getElementById(`app`).innerHTML = `"${joke.joke}"`;
 };
 
 async function getJokeNorris() {
@@ -48,7 +57,8 @@ class Rating {
 function reportAcudits(score) {
     let joke = document.getElementById(`app`).textContent;
     if (joke === "" || document.getElementById(`app`).textContent === `Graciès per votar!`) {
-        alert(`clica a "Següent acudit"`)
+        alert(`Clica a "Següent acudit"`);
+
     } else {
         const d = new Date();
         let date = d.toISOString();
@@ -59,4 +69,4 @@ function reportAcudits(score) {
     }
 };
 weatherForecast();
-aleatori()
+fons()
